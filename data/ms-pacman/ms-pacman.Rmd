@@ -5,9 +5,9 @@ output: html_document
 
 #Noise study of evolutionary Ms. Pacman 
 ```{r setup, echo=FALSE}
-gen.1 <- read.csv("gen1.csv",head=FALSE)
-gen.25 <- read.csv("gen25.csv",head=FALSE)
-gen.50 <- read.csv("gen50.csv",head=FALSE)
+gen.1 <- t(read.csv("gen1.csv",head=FALSE))
+gen.25 <- t(read.csv("gen25.csv",head=FALSE))
+gen.50 <- t(read.csv("gen50.csv",head=FALSE))
 library(ggplot2)
 ```
 
@@ -15,4 +15,5 @@ library(ggplot2)
 
 
 ```{r histogen1, echo=FALSE}
+
 ```
