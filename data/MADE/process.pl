@@ -8,7 +8,7 @@ use v5.14;
 use File::Slurp::Tiny qw(read_lines);
 my @files = <d*.csv>;
 
-my @data = ['Gen','Id','Fitness'];
+my @data = ['Gen','ID','Fitness'];
 for my $f (@files) {
     my ($gen, $id) = ($f =~ /(\d+)_(\d+)/);
     my @f_content = read_lines( $f );
@@ -17,7 +17,7 @@ for my $f (@files) {
       chop $l;
       my @values=split(/;/,$l);
       $values[$#values] =~ s/,/./;
-      push @data, [$gen, $id, $values[$#values]];
+      push @data, [$gen, "Id$id", $values[$#values]];
     }
     
 }

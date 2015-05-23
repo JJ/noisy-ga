@@ -1,6 +1,5 @@
 library(ggplot2)
 
-
 #Function definitions
 process.to.df <- function( data ){
     df <- data.frame(ID=character(),
