@@ -1,6 +1,6 @@
 library(fitdistrplus)
 
-fitnames <-  c('weibull','norm','gamma')
+fitnames <-  c('weibull','norm','gamma','pois','beta')
 
 fit.to.noise <- function( data ) {
     fits <- list()
