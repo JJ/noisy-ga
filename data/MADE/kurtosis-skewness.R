@@ -1,4 +1,5 @@
 library(e1071)
+library(ggplot2)
 
 s.k <- data.frame(Gen=character(), 
                   Skewness=character(),
@@ -14,3 +15,5 @@ for ( i in c(64,128,256)) {
                                   ,Kurtosis=kurtosis(this.data)))
     }
 }
+
+ggplot(s.k,aes(x=Skewness,y=Kurtosis,color=Gen))+geom_point()+scale_x_continuous(limits=c(-1,2.5))+scale_y_continuous(limits=c(-1,8))
